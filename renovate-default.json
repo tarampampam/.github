@@ -4,19 +4,22 @@
   "assignees": ["tarampampam"],
   "enabledManagers": ["regex"],
   "extends": [
-    "config:base",
-    ":disableDependencyDashboard",
-    ":rebaseStalePrs",
-    ":semanticCommitScope(deps)"
+      "config:base",
+      ":disableDependencyDashboard",
+      ":rebaseStalePrs"
   ],
   "regexManagers": [
     {
-      "description": "Update _VERSION variables in Dockerfiles",
+      "description": "Update _VER(SION) variables in Dockerfiles",
       "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?) depName=(?<depName>.+?)(?: lookupName=(?<lookupName>.+?))?(?: versioning=(?<versioning>[a-z-]+?))?(?: extractVersion=(?<extractVersion>.*?))?\\s(?:ENV|ARG) .+?_VER(?:|SION)=(?<currentValue>.+?)\\s"
+        "# renovate: source=(?<dataSource>[a-z-]+?) name=(?<depName>[^\\s]+?)(?: depType=(?<depType>[a-z-]+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?\\s(?:ENV|ARG) .+_VER(?:|SION)=[\"']?(?<currentValue>.+?)[\"']?\\s"
       ],
-      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
+      "datasourceTemplate": "{{dataSource}}",
+      "depNameTemplate": "{{depName}}",
+      "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.+)${{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "depTypeTemplate": "{{#if depType}}{{depType}}{{else}}libraries{{/if}}"
     }
   ]
 }
