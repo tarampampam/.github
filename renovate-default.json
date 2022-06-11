@@ -5,8 +5,7 @@
   "enabledManagers": ["regex"],
   "extends": [
       "config:base",
-      ":disableDependencyDashboard",
-      ":rebaseStalePrs"
+      ":disableDependencyDashboard"
   ],
   "regexManagers": [
     {
