@@ -1,0 +1,46 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":disableDependencyDashboard",
+    ":semanticCommitType(chore)"
+  ],
+  "enabledManagers": [
+    "docker-compose",
+    "regex"
+  ],
+  "branchConcurrentLimit": 15,
+  "prConcurrentLimit": 10,
+  "docker-compose": {
+    "enabled": true,
+    "fileMatch": [
+      "(^|/)(?:docker-)?compose[^/]*\\.ya?ml$"
+    ],
+    "digest": {
+      "enabled": false
+    }
+  },
+  "regexManagers": [
+    {
+      "description": "Update _VER(SION) variables in Dockerfiles",
+      "fileMatch": [
+        "(^|/|\\.)Dockerfile$",
+        "(^|/)Dockerfile\\.[^/]*$"
+      ],
+      "matchStrings": [
+        "# renovate: source=(?<dataSource>[a-z-]+?) name=(?<depName>[^\\s]+?)(?: depType=(?<depType>[a-z-]+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?\\s(?:ENV|ARG) .+_VER(?:|SION)=[\"']?(?<currentValue>.+?)[\"']?\\s"
+      ],
+      "datasourceTemplate": "{{dataSource}}",
+      "depNameTemplate": "{{depName}}",
+      "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.+)${{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "depTypeTemplate": "{{#if depType}}{{depType}}{{else}}libraries{{/if}}"
+    }
+  ],
+  "assignees": [
+    "tarampampam"
+  ],
+  "labels": [
+    "dependencies"
+  ]
+}
