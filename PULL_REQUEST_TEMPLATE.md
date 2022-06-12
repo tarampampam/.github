@@ -13,7 +13,7 @@ Fixes # (issue)
 - [ ] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented on my code, particularly in hard-to-understand areas
-- [ ] I wrote unit tests for my code _(if tests are required for my changes)_
+- [ ] I wrote unit tests for my code _(if tests are required for my changes)_ <!-- feel free to drop this item from the list -->
 - [ ] I have made changes in the `CHANGELOG.md` file
 
 <!--
