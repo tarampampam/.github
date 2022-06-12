@@ -11,6 +11,7 @@
   ],
   "branchConcurrentLimit": 15,
   "prConcurrentLimit": 10,
+  "prHourlyLimit": 15,
   "docker-compose": {
     "enabled": true,
     "fileMatch": [
