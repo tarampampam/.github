@@ -4,8 +4,7 @@
 
 Buddy, first of all, I want to thank you very much for your contribution. I really appreciate it 🤩
 
-
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+Describe briefly what this PR contains and what problem it solves. Please also include relevant motivation and context (list any dependencies that are required for this change, for example)
 
 -->
 
