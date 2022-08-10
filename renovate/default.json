@@ -23,15 +23,16 @@
   },
   "regexManagers": [
     {
-      "description": "Update _VER(SION) variables in Dockerfiles",
+      "description": "Custom renovations",
       "fileMatch": [
         "(^|/|\\.)Dockerfile$",
-        "(^|/)Dockerfile\\.[^/]*$"
+        "(^|/)Dockerfile\\.[^/]*$",
+        "\\.ya?ml$"
       ],
       "matchStrings": [
-        "# renovate: source=(?<dataSource>[a-z-]+?) name=(?<depName>[^\\s]+?)(?: depType=(?<depType>[a-z-]+?))?(?: versioning=(?<versioning>.+?))?(?: extractVersion=(?<extractVersion>.+?))?\\s(?:ENV|ARG) .+_VER(?:|SION)=[\"']?(?<currentValue>.+?)[\"']?\\s"
+        "# renovate: source=(?<datasource>\\S+) name=(?<depName>\\S+)(?: depType=(?<depType>[a-z-]+?))?(?: versioning=(?<versioning>\\S+))?(?: extractVersion=(?<extractVersion>\\S+))?[^\\n]*\\n[^\\n]+[:=]['\"\\s]*(?<currentValue>[^\"'\\n\\s]+)[\"']?[^\\n]*\\n?"
       ],
-      "datasourceTemplate": "{{dataSource}}",
+      "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}github-releases{{/if}}",
       "depNameTemplate": "{{depName}}",
       "extractVersionTemplate": "{{#if extractVersion}}{{{extractVersion}}}{{else}}^v?(?<version>.+)${{/if}}",
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
