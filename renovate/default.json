@@ -28,7 +28,8 @@
         "(^|/|\\.)Dockerfile$",
         "(^|/)Dockerfile\\.[^/]*$",
         "\\.ya?ml$",
-        "\\.b?a?sh"
+        "\\.b?a?sh",
+        "(^|/|\\.)Makefile"
       ],
       "matchStrings": [
         "# renovate: source=(?<datasource>\\S+) name=(?<depName>\\S+)(?: depType=(?<depType>[a-z-]+?))?(?: versioning=(?<versioning>\\S+))?(?: extractVersion=(?<extractVersion>\\S+))?[^\\n]*\\n[^\\n]+[:=]['\"\\s]*(?<currentValue>[^\"'\\n\\s]+)[\"']?[^\\n]*\\n?"
