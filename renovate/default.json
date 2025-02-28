@@ -9,7 +9,7 @@
   "branchConcurrentLimit": 15,
   "prConcurrentLimit": 10,
   "prHourlyLimit": 15,
-  "stabilityDays": 7,
+  "minimumReleaseAge": "7 days",
   "schedule": ["monthly"],
   "docker-compose": {
     "enabled": true,
