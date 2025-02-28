@@ -9,6 +9,8 @@
   "branchConcurrentLimit": 15,
   "prConcurrentLimit": 10,
   "prHourlyLimit": 15,
+  "stabilityDays": 7,
+  "schedule": ["monthly"],
   "docker-compose": {
     "enabled": true,
     "fileMatch": ["(^|/)(?:docker-)?compose[^/]*\\.ya?ml$"],
