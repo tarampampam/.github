@@ -2,8 +2,6 @@
 
 This security policy applies to **all repositories** under the [@tarampampam](https://github.com/tarampampam) GitHub account.
 
----
-
 ## Reporting a Vulnerability
 
 If you discover a security vulnerability in any project maintained under this account:
@@ -20,8 +18,6 @@ Your report should include:
 - Steps to reproduce or proof of concept, if available
 - Any known mitigations or temporary workarounds
 
----
-
 ## Disclosure Policy
 
 All security reports are handled through **responsible disclosure**:
@@ -29,8 +25,6 @@ All security reports are handled through **responsible disclosure**:
 - I aim to acknowledge your report within **one week**
 - Once verified, I will work to reproduce, fix, and release an update as soon as practical
 - Public disclosure will occur only after a fix or mitigation is available, unless otherwise agreed upon
-
----
 
 ## Scope
 
@@ -40,14 +34,5 @@ This policy covers:
 
 Out of scope:
 - Security issues in third-party dependencies. Such vulnerabilities should be reported **upstream** to the original maintainers.
-
----
-
-## Safe Harbor
-
-I will **not** pursue legal action against security researchers who:
-- Make a good faith effort to follow this policy
-- Avoid privacy violations, data destruction, and service disruption
-- Report vulnerabilities promptly and privately
 
 Your contributions help keep this software ecosystem secure and reliable - thank you.
