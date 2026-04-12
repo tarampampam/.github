@@ -89,6 +89,8 @@ complete.
    - Deprecations or breaking changes.
    - If no `README.md` exists in the repository, skip this step. If the change is purely internal (e.g. refactoring,
      tests, CI tweaks) and has no impact on how users interact with the project, skip this step.
+6. **Update `AGENTS.md`** (optional): update the project-level `AGENTS.md` (usually at the repo root) to reflect
+   anything a future agent needs to know to work effectively in this codebase.
 
 Do not present work as finished until all steps above pass without errors or warnings.
 Do not fix issues outside the current task scope without asking first.
