@@ -103,7 +103,7 @@ If rules conflict, follow the highest priority source.
 
 ### `README.md`:
 
-```diff
+```makrdown
 ## 🧠 A note on AI-assisted development
 
 AI tools are great assistants - they can autocomplete, review, summarize, and help you move faster. But they're not a
@@ -119,4 +119,11 @@ Until then: trust, but verify.
 ## 🤖 AI Agent Instructions
 
 See [AGENTS.md](AGENTS.md) for detailed guidelines for AI agents working with this repository.
+```
+
+### `.gitignore`
+
+```gitignore
+## AI shit
+/.claude
 ```
