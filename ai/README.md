@@ -125,5 +125,10 @@ See [AGENTS.md](AGENTS.md) for detailed guidelines for AI agents working with th
 
 ```gitignore
 ## AI shit
+/.copilot
+/.cursor
 /.claude
+/.windsurf
+/.aider*
+/.gemini
 ```
