@@ -2,11 +2,12 @@
 
 <!--
 
-Hey there! First off, I want to express my gratitude for your contribution. Thank you so much! 🤩
+Hey there! First off, I want to express my gratitude for your contribution. Thank you 
+so much! 🤩
 
-Please provide a brief description of what this PR accomplishes and the problem it solves. Additionally,
-include any relevant context or motivation behind the changes. If there are any dependencies required
-for this change, list them here.
+Please provide a brief description of what this PR accomplishes and the problem it 
+solves. Additionally, include any relevant context or motivation behind the changes.
+If there are any dependencies required for this change, list them here.
 
 -->
 
